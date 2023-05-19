@@ -1,0 +1,116 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        header {
+            margin: 15px;
+            background-color:gray;
+        }
+
+        section {
+            margin: 15px;
+            background-color: ghostwhite;
+        }
+
+        div {
+            background-color: yellowgreen ;
+            margin: 15px;
+        }
+
+        p {
+            background-color: firebrick;
+            margin: 15px;
+        }
+
+        p span {
+            font-size: 26px;
+            font-weight: bolder;
+        }
+
+        footer {
+            margin: 15px;
+            background-color: #72807cab;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            HEADER
+        </h1>
+        A header element is intended to usually contain the section's heading (an h1–h6 element or an hgroup element),
+        but this is not required. The header element can also be used to wrap a section's table of contents, a search
+        form, or any relevant logos. <br>
+        <a href="https://html.spec.whatwg.org/multipage/sections.html#the-header-element" target="_blank">header</a>
+    </header>
+
+    <section>
+        <h1>SECTION</h1>
+        Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the numbered
+        sections of a thesis. A Web site's home page could be split into sections for an introduction, news items, and
+        contact information. <br>
+        <a href="https://html.spec.whatwg.org/multipage/sections.html#the-section-element" target="_blank">section</a>
+    </section>
+
+    <div>
+        <h1>DIV</h1>
+        The div element has no special meaning at all. It represents its children. It can be used with the class, lang,
+        and title attributes to mark up semantics common to a group of consecutive elements. It can also be used in a dl
+        element, wrapping groups of dt and dd elements. <br>
+        <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element" target="_blank">div</a>
+    </div>
+
+    <p>
+        <span>Paragraph Tag</span><br>
+        While paragraphs are usually represented in visual media by blocks of text that are physically separated from
+        adjacent blocks through blank lines, a style sheet or user agent would be equally justified in presenting
+        paragraph breaks in a different manner, for instance using inline pilcrows (¶) <br>
+        <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-p-element" target="_blank">P Tag</a>
+    </p>
+    <hr>
+    <p>
+    
+
+       
+    </form>
+    <hr>
+    <h1>UL & OL tags</h1>
+    <ul>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>MySQL</li>
+        <li>MongoDB</li>
+    </ul>
+
+    <ol type="1">
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>MySQL</li>
+        <li>MongoDB</li>
+    </ol>
+
+    <ol type="A">
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>MySQL</li>
+        <li>MongoDB</li>
+    </ol>
+
+    <ol type="I">
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>MySQL</li>
+        <li>MongoDB</li>
+    </ol>
+
+
+
+    
+
+</body>
+
+</html>
