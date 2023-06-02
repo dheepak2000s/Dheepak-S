@@ -1,42 +1,38 @@
-var va11=null,va12=null,oper=null;
-function clr(){
-    var res=document.getElementById("res");
-    res.value="";
-    va11 = va12 = oper = null;
-}
-function inval(val){
-    var res=document.getElementById("res");
-    res.value=res.value +val;
-}
-function inop(op){
-    var res = document.getElementById("res");
-    oper =op;
-    va11=parseInt(res.value);
-    res.value="";
-}
-function result(){
-    switch(oper){
-        case '+':return va11+va12; break;
-        case '-':return va11-va12; break;
-        case '*':return va11*va12; break;
-        case '/':return va11/va12; break;
-             if(va12==0){
-                alert("Enter an other value!");
-             }else{
-                return va11/va12;
-             }
-        break;     
+document.querySelector("#search").addEventListener("click", getPokemon);
 
-        
-    }
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
-function calculate(){
-    var res=document.getElementById("res");
-    if((va11 == null)||(res.value == "")){
-        alert("please enter a value!");
-    }else{
-        va12=parseInt(res.value);
-        res.value=result();
 
-    }
+function lowerCaseName(string) {
+  return string.toLowerCase();
+}
+
+function getPokemon(e) {
+  const name = document.querySelector("#pokemonName").value;
+  const pokemonName = lowerCaseName(name);
+
+  fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+    .then((response) => response.json())
+    .then((data) => {
+      document.querySelector(".pokemonBox").innerHTML = `
+      <div>
+        <img
+          src="${data.sprites.other["official-artwork"].front_default}"
+          alt="Pokemon name"
+        />
+      </div>
+      <div class="pokemonInfos">
+        <h1>${capitalizeFirstLetter(data.name)}</h3>
+        <p>Weight: ${data.weight}</p>
+      </div>`;
+    })
+    .catch((err) => {
+      document.querySelector(".pokemonBox").innerHTML = `
+      <h4>Pokemon not found 😞</h4>
+      `;
+      console.log("Pokemon not found", err);
+    });
+
+  e.preventDefault();
 }
